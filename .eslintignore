@@ -1,0 +1,9 @@
+build/
+public/
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+reportWebVitals.ts
+postcss.config.js
+tailwind.config.js

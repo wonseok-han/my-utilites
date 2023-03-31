@@ -1,26 +1,107 @@
+// https://www.typescriptlang.org/tsconfig
 {
   "compilerOptions": {
+    // Base Options
+    /**
+     * Specifies which default library (lib.d.ts) to use. The values are "es3", "es5", "es6", "es2015", "es2016", "es2017", "es2018", "es2019", "es2020", "esnext".
+     */
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    /**
+     * Specifies the module system, when generating module code. The values are "amd", "commonJS", "es2015", "es6", "esnext", "none", "system", "umd".
+     */
     "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    /**
+     * Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files.
+     */
+    "allowJs": true,
+    /**
+     * Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files.
+     */
+    "jsx": "react-jsx",
+    /**
+     * This makes room for another tool like Babel, or swc to handle converting the TypeScript file to a file which can run inside a JavaScript environment.
+     */
     "noEmit": true,
-    "jsx": "react-jsx"
+    "isolatedModules": true,
+    // Strict Type Option
+    /**
+     * The strict flag enables a wide range of type checking behavior that results in stronger guarantees of program correctness.
+     */
+    "strict": true,
+    /**
+     * When strictNullChecks is true, null and undefined have their own distinct types and you’ll get a type error if you try to use them where a concrete value is expected.
+     */
+    "strictNullChecks": false,
+    /**
+     * In some cases where no type annotations are present, TypeScript will fall back to a type of any for a variable when it cannot infer the type.
+     */
+    "noImplicitAny": true,
+    /**
+     * When enabled, this flag causes functions parameters to be checked more correctly.
+     */
+    "strictFunctionTypes": true,
+    /**
+     * Report errors on unused local variables.
+     */
+    "noUnusedLocals": true,
+    /**
+     * Report errors on unused parameters in functions.
+     */
+    "noUnusedParameters": false,
+    /**
+     * When enabled, TypeScript will check all code paths in a function to ensure they return a value.
+     */
+    "noImplicitReturns": true,
+    /**
+     * Report errors for fallthrough cases in switch statements. Ensures that any non-empty case inside a switch statement includes either break or return.
+     */
+    "noFallthroughCasesInSwitch": true,
+    // Module Options
+    /**
+     * Specifies how modules are resolved for imports. The values are "node" and "classic".
+     */
+    "moduleResolution": "node",
+    /**
+     * Allow default imports from modules with no default export. This does not affect code emit, just type checking.
+     */
+    "allowSyntheticDefaultImports": true,
+    /**
+     * By default (with esModuleInterop false or not set) TypeScript treats CommonJS/AMD/UMD modules similar to ES6 modules.
+     */
+    "esModuleInterop": false,
+    /**
+     * Allows importing modules with a ‘.json’ extension, which is a common practice in node projects.
+     */
+    "resolveJsonModule": true,
+    /**
+     * Base directory to resolve non-relative module names.
+     */
+    "baseUrl": "src",
+    // Other Options
+    /**
+     * Skip type checking of declaration files.
+     */
+    "skipLibCheck": true,
+    /**
+     * When this option is set, TypeScript will issue an error if a program tries to include a file by a casing different from the casing on disk.
+     */
+    "forceConsistentCasingInFileNames": true,
   },
+  /**
+   * Specifies an array of filenames or patterns to include in the program.
+   */
   "include": [
     "src"
+  ],
+  /**
+   * Specifies an array of filenames or patterns that should be skipped when resolving include.
+   */
+  "exclude": [
+    "node_modules"
   ]
 }
