@@ -2,7 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { useState } from 'react';
-import { HiMenuAlt1, HiOutlineX } from 'react-icons/hi';
+import { HiOutlineX } from 'react-icons/hi';
+import { SlArrowDown, SlArrowUp } from 'react-icons/sl';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SideProps {
@@ -11,7 +12,7 @@ interface SideProps {
 }
 
 const Side = ({ isOpen, onClose }: SideProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   const location = useLocation();
 
   const handleExpandToggle = () => {
@@ -25,19 +26,17 @@ const Side = ({ isOpen, onClose }: SideProps) => {
       } absolute inset-y-0 left-0 w-64 bg-gray-800 text-white transition-all duration-300 ease-in-out z-50`}
     >
       <div className="flex justify-between items-center py-3 px-4">
-        <div className="text-lg font-semibold">Side Menu</div>
+        <div className="text-lg font-semibold">{/* 사이드메뉴 타이틀 */}</div>
         <button className="text-gray-500 hover:text-white" onClick={onClose}>
           <HiOutlineX />
         </button>
       </div>
-      <div className="flex justify-between items-center py-3 px-4">
+      <div
+        className="flex justify-between items-center py-3 px-4 cursor-pointer hover:text-gray-300"
+        onClick={handleExpandToggle}
+      >
         <div className="text-lg font-semibold">Menu</div>
-        <button
-          className="text-gray-500 hover:text-white"
-          onClick={handleExpandToggle}
-        >
-          <HiMenuAlt1 />
-        </button>
+        {isExpanded ? <SlArrowDown /> : <SlArrowUp />}
       </div>
       <div
         className={`${

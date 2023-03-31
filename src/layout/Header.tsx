@@ -16,11 +16,21 @@ const Header = ({ onSideToggle }: HeaderProps) => {
   };
 
   return (
-    <header className="flex fixed w-full justify-between items-center py-3 px-4 bg-gray-900 text-white">
-      <button className="text-gray-500 hover:text-white" onClick={onSideToggle}>
+    <header className="h-16 flex fixed w-full justify-between items-center py-3 px-4 bg-gray-800 text-white">
+      <button
+        className="text-gray-500 hover:text-white text-2xl"
+        onClick={onSideToggle}
+      >
         <HiMenuAlt1 />
       </button>
-      <h1 className="text-lg font-bold text-white">{`wonseok-han's Utilites`}</h1>
+      <h1 className="text-lg font-bold text-white">
+        <Link
+          to="/"
+          className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+        >
+          {`wonseok-han's Utilites`}
+        </Link>
+      </h1>
       <nav className="hidden md:flex md:items-center">
         <Link
           to="/"

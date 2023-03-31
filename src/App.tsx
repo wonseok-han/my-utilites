@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Content from 'layout/Content';
 import Footer from 'layout/Footer';
 import Header from 'layout/Header';
 import Side from 'layout/Side';
-import Home from 'pages/Home';
+import Routes from 'Routes';
 
 function App() {
   const [isSideOpen, setIsSideOpen] = useState(false);
@@ -25,9 +25,7 @@ function App() {
         <Side isOpen={isSideOpen} onClose={handleCloseSide} />
         <div className="flex flex-col w-full min-h-full">
           <Content>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
+            <Routes />
           </Content>
           <Footer />
         </div>
