@@ -1,5 +1,5 @@
 {
-  "name": "my-utilites",
+  "name": "my-utilities",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -71,5 +71,5 @@
     "prettier": "^2.8.7",
     "tailwindcss": "^3.3.0"
   },
-  "homepage": "https://wonseok-han.github.io/my-utilites"
+  "homepage": "https://wonseok-han.github.io/my-utilities"
 }

@@ -7,7 +7,7 @@ const Footer = () => {
       style={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
     >
       <p className="text-gray-400 text-center">
-        © {new Date().getFullYear()} {`wonseok-han's Utilites`}
+        © {new Date().getFullYear()} {`wonseok-han's Utilities`}
       </p>
       <a
         href={`https://github.com/wonseok-han/my-utilites`}

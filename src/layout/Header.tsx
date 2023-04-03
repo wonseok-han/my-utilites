@@ -29,7 +29,7 @@ const Header = ({ onSideToggle }: HeaderProps) => {
           to="/"
           className="py-2 px-4 text-white font-semibold hover:text-gray-300"
         >
-          {`wonseok-han's Utilites`}
+          {`wonseok-han's Utilities`}
         </Link>
       </h1>
       <nav className="hidden md:flex md:items-center">
