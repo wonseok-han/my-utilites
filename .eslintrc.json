@@ -162,7 +162,7 @@
       }
     ],
     "@typescript-eslint/indent": [
-      "error",
+      "warn",
       2
     ], // Enforce consistent indentation
     "@typescript-eslint/comma-dangle": [

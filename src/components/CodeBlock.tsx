@@ -56,7 +56,7 @@ const CodeBlock = ({ code, language }: CodeBlockProps) => {
       </div>
       <pre
         ref={codeBlock}
-        className="line-numbers rounded-none pre-scrollable p-4 bg-gray-800 text-white"
+        className="line-numbers rounded-none pre-scrollable p-4 bg-gray-800 text-white overflow-x-auto"
         style={{ margin: 0 }}
       >
         <code className={`language-${language}`}>{code}</code>

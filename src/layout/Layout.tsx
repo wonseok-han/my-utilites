@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import TocProvider from 'contexts/TocContext';
 import Content from 'layout/Content';
 import Footer from 'layout/Footer';
 import Header from 'layout/Header';
@@ -16,17 +17,18 @@ const Layout = () => {
   const handleCloseSide = () => {
     setIsSideOpen(false);
   };
+
   return (
     <>
       <Header onSideToggle={handleSideToggle} />
-      <div className="flex min-h-screen">
-        <Side isOpen={isSideOpen} onClose={handleCloseSide} />
-        <div className="flex flex-col w-full min-h-full">
+      <div className="flex min-h-full flex-col">
+        <TocProvider>
+          <Side isOpen={isSideOpen} onClose={handleCloseSide} />
           <Content isSideOpen={isSideOpen}>
             <Routes />
           </Content>
           <Footer />
-        </div>
+        </TocProvider>
       </div>
     </>
   );

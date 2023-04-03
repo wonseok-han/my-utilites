@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Routes as GetRoutes, Route, useLocation } from 'react-router-dom';
 
-import { Home, Item2, Item3 } from 'pages';
+import { Home, Utils } from 'pages';
 
 const Routes: React.FC = () => {
   const location = useLocation();
@@ -11,8 +11,7 @@ const Routes: React.FC = () => {
     <GetRoutes location={location}>
       <Route path="/" element={<Home />} />
 
-      <Route path="/item2" element={<Item2 />} />
-      <Route path="/item3" element={<Item3 />} />
+      <Route path="/utils" element={<Utils />} />
     </GetRoutes>
   );
 };
