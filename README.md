@@ -1,6 +1,6 @@
-## wonseok-han's utilites page
+## wonseok-han's utilities page
 
-* https://wonseok-han.github.io/my-utilites
+* https://wonseok-han.github.io/my-utilities
 
 ## 구성
 * Typescript
