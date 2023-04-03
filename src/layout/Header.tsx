@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+import './styles/Header.css';
 
 interface HeaderProps {
   onSideToggle: () => void;
@@ -16,7 +17,7 @@ const Header = ({ onSideToggle }: HeaderProps) => {
   };
 
   return (
-    <header className="h-16 flex fixed w-full justify-between items-center py-3 px-4 bg-gray-800 text-white">
+    <header className="h-16 flex fixed w-full justify-between items-center py-3 px-4 bg-gray-800 text-white z-50">
       <button
         className="text-gray-500 hover:text-white text-2xl"
         onClick={onSideToggle}
@@ -51,17 +52,17 @@ const Header = ({ onSideToggle }: HeaderProps) => {
           Item3
         </Link>
       </nav>
-      <div className="md:hidden">
+      <div className={`md:hidden`}>
         <button
-          className="text-gray-500 hover:text-white"
+          className="text-gray-500 hover:text-white text-2xl"
           onClick={handleMenuToggle}
         >
           <HiMenuAlt1 />
         </button>
         <div
-          className={`${
+          className={`absolute inset-x-0 top-16 shadow-lg md:hidden bg-gray-800 text-white ${
             isMenuOpen ? 'block' : 'hidden'
-          } absolute inset-0 bg-gray-900 text-white z-40`}
+          } ${isMenuOpen ? 'slide-down' : 'slide-up'}`}
         >
           <nav className="flex flex-col items-center justify-center h-full">
             <Link
