@@ -4,7 +4,7 @@ import Layout from 'layout/Layout';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Layout />
     </Router>
   );
