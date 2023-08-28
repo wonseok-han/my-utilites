@@ -28,7 +28,7 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "deploy": "gh-pages -d build",
-    "predeploy": "yarn build"
+    "predeploy": "npm run build"
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [
