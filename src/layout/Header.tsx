@@ -40,10 +40,10 @@ const Header = ({ onSideToggle }: HeaderProps) => {
           Home
         </Link>
         <Link
-          to="/utils"
+          to="/lib"
           className="py-2 px-4 text-white font-semibold hover:text-gray-300"
         >
-          유틸
+          Lib
         </Link>
       </nav>
       <div className={`md:hidden`}>
@@ -69,13 +69,13 @@ const Header = ({ onSideToggle }: HeaderProps) => {
               Home
             </Link>
             <Link
-              to="/utils"
+              to="/lib"
               className="py-2 px-4 text-white font-semibold hover:text-gray-300"
               onClick={() => {
                 setIsMenuOpen(false);
               }}
             >
-              유틸
+              Lib
             </Link>
           </nav>
         </div>

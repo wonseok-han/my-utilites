@@ -1,4 +1,4 @@
 import Home from './Home';
-import Utils from './Utils';
+import Libraries from './Libraries';
 
-export { Home, Utils };
+export { Home, Libraries };
