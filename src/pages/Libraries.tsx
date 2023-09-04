@@ -11,7 +11,6 @@ interface CodeContentProps extends FuncStrProps {
 const CodeContent = ({ section, id, name, funcStr }: CodeContentProps) => {
   return (
     <>
-      <hr className="mt-1 h-1 bg-gray-700" />
       <div className="ml-4">
         <ContentTitle
           text={`${section}-${id}. ${name}`}
@@ -28,6 +27,7 @@ const Libraries = () => {
   return (
     <>
       <ContentTitle text="1. Date" />
+      <hr className="mt-1 h-1 bg-gray-700" />
       {funcDateStr.map((item) => (
         <CodeContent
           key={`date-${item.id}`}
@@ -37,8 +37,10 @@ const Libraries = () => {
           funcStr={item.funcStr}
         />
       ))}
+      <hr className="mt-1 h-1 bg-gray-700" />
 
       <ContentTitle text="2. Data" className="mt-10" />
+      <hr className="mt-1 h-1 bg-gray-700" />
       {funcDataStr.map((item) => (
         <CodeContent
           key={`data-${item.id}`}
@@ -50,6 +52,7 @@ const Libraries = () => {
       ))}
 
       <ContentTitle text="3. String" className="mt-10" />
+      <hr className="mt-1 h-1 bg-gray-700" />
       {funcStringStr.map((item) => (
         <CodeContent
           key={`string-${item.id}`}

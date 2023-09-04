@@ -45,4 +45,97 @@ const rPad = (str, maxLen, right) => {
     return result.length >= maxLen ? result.substring(0, maxLen) : result;
 };`,
   },
+  {
+    id: 3,
+    name: 'convertToCamelCase',
+    funcStr: `/**
+ * convertToCamelCase
+ * @param str 변환할 문자열
+ * @returns camelCase로 변환된 문자열
+ * @description 문자열을 camelCase로 변환하는 함수.
+ */
+const convertToCamelCase = (str) => {
+    return str
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => char.toUpperCase());
+};`,
+  },
+  {
+    id: 4,
+    name: 'convertToKebabCase',
+    funcStr: `/**
+ * convertToKebabCase
+ * @param str 변환할 문자열
+ * @returns kebab-case로 변환된 문자열
+ * @description 문자열을 kebab-case로 변환하는 함수.
+ */
+const convertToKebabCase = (str) => {
+    return str
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => '-' + char)
+      .trim();
+};`,
+  },
+  {
+    id: 5,
+    name: 'convertToPascalCase',
+    funcStr: `/**
+ * convertToPascalCase
+ * @param str 변환할 문자열
+ * @returns PascalCase로 변환된 문자열
+ * @description 문자열을 PascalCase로 변환하는 함수.
+ */
+const convertToPascalCase = (str) => {
+    return (' ' + str)
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => char.toUpperCase());
+};`,
+  },
+  {
+    id: 6,
+    name: 'convertToSentenceCase',
+    funcStr: `/**
+ * convertToSentenceCase
+ * @param str 변환할 문자열
+ * @returns Sentence case로 변환된 문자열
+ * @description 문자열을 Sentence case로 변환하는 함수.
+ */
+const convertToSentenceCase = (str) => {
+    return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
+};`,
+  },
+  {
+    id: 7,
+    name: 'convertToSnakeCase',
+    funcStr: `/**
+ * convertToSnakeCase
+ * @param str 변환할 문자열
+ * @returns snake_case로 변환된 문자열
+ * @description 문자열을 snake_case로 변환하는 함수.
+ */
+const convertToSnakeCase = (str) => {
+    return (' ' + str)
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => {
+        return '_' + char;
+      })
+      .substring(1);
+};`,
+  },
+  {
+    id: 8,
+    name: 'convertToTitleCase',
+    funcStr: `/**
+ * convertToTitleCase
+ * @param str 변환할 문자열
+ * @returns Title Case로 변환된 문자열
+ * @description 문자열을 Title Case로 변환하는 함수.
+ */
+const convertToTitleCase = (str) => {
+    return (' ' + str)
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => ' ' + char.toUpperCase())
+      .trim();
+};`,
+  },
 ];
