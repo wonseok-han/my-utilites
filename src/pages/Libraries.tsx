@@ -4,12 +4,20 @@ import { funcDataStr } from 'json/data';
 import { funcDateStr } from 'json/date';
 import { funcStringStr } from 'json/string';
 
-const CodeContent = ({ id, name, funcStr }: FuncStrProps) => {
+interface CodeContentProps extends FuncStrProps {
+  section: string;
+}
+
+const CodeContent = ({ section, id, name, funcStr }: CodeContentProps) => {
   return (
     <>
       <hr className="mt-1 h-1 bg-gray-700" />
       <div className="ml-4">
-        <ContentTitle text={`1-${id}. ${name}`} type="h2" className="text-xl" />
+        <ContentTitle
+          text={`${section}-${id}. ${name}`}
+          type="h2"
+          className="text-xl"
+        />
         <CodeBlock code={funcStr} language="javascript" />
       </div>
     </>
@@ -23,6 +31,7 @@ const Libraries = () => {
       {funcDateStr.map((item) => (
         <CodeContent
           key={`date-${item.id}`}
+          section={'1'}
           id={item.id}
           name={item.name}
           funcStr={item.funcStr}
@@ -33,6 +42,7 @@ const Libraries = () => {
       {funcDataStr.map((item) => (
         <CodeContent
           key={`data-${item.id}`}
+          section={'2'}
           id={item.id}
           name={item.name}
           funcStr={item.funcStr}
@@ -43,6 +53,7 @@ const Libraries = () => {
       {funcStringStr.map((item) => (
         <CodeContent
           key={`string-${item.id}`}
+          section={'3'}
           id={item.id}
           name={item.name}
           funcStr={item.funcStr}
