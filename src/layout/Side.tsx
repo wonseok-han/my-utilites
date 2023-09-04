@@ -23,7 +23,6 @@ const Side = ({ isOpen, onClose }: SideProps) => {
   };
 
   useEffect(() => {
-    console.log(toc);
     setTocItems(toc);
   }, [toc]);
 
