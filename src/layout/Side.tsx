@@ -68,12 +68,16 @@ const Side = ({ isOpen, onClose }: SideProps) => {
               {item.level > 1 ? (
                 <>
                   <FaRegListAlt />
-                  <span style={{ marginLeft: '8px' }}>{item.text}</span>
+                  <span className="text-ellipsis ml-2 overflow-hidden">
+                    {item.text}
+                  </span>
                 </>
               ) : (
                 <>
                   <FaFolder />
-                  <span style={{ marginLeft: '8px' }}>{item.text}</span>
+                  <span className="text-ellipsis ml-2 overflow-hidden">
+                    {item.text}
+                  </span>
                 </>
               )}
             </a>
