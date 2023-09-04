@@ -55,3 +55,78 @@ export const rPad = (str: string, maxLen: number, right: string): string => {
 
   return result.length >= maxLen ? result.substring(0, maxLen) : result;
 };
+
+/**
+ * convertToCamelCase
+ * @param str 변환할 문자열
+ * @returns camelCase로 변환된 문자열
+ * @description 문자열을 camelCase로 변환하는 함수.
+ */
+export const convertToCamelCase = (str: string) => {
+  return str
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => char.toUpperCase());
+};
+
+/**
+ * convertToKebabCase
+ * @param str 변환할 문자열
+ * @returns kebab-case로 변환된 문자열
+ * @description 문자열을 kebab-case로 변환하는 함수.
+ */
+export const convertToKebabCase = (str: string) => {
+  return str
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => '-' + char)
+    .trim();
+};
+
+/**
+ * convertToPascalCase
+ * @param str 변환할 문자열
+ * @returns PascalCase로 변환된 문자열
+ * @description 문자열을 PascalCase로 변환하는 함수.
+ */
+export const convertToPascalCase = (str: string) => {
+  return (' ' + str)
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => char.toUpperCase());
+};
+
+/**
+ * convertToSentenceCase
+ * @param str 변환할 문자열
+ * @returns Sentence case로 변환된 문자열
+ * @description 문자열을 Sentence case로 변환하는 함수.
+ */
+export const convertToSentenceCase = (str: string) => {
+  return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
+};
+
+/**
+ * convertToSnakeCase
+ * @param str 변환할 문자열
+ * @returns snake_case로 변환된 문자열
+ * @description 문자열을 snake_case로 변환하는 함수.
+ */
+export const convertToSnakeCase = (str: string) => {
+  return (' ' + str)
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => {
+      return '_' + char;
+    })
+    .substring(1);
+};
+
+/**
+ * convertToTitleCase
+ * @param str 변환할 문자열
+ * @returns Title Case로 변환된 문자열
+ * @description 문자열을 Title Case로 변환하는 함수.
+ */
+export const convertToTitleCase = (str: string) => {
+  return (' ' + str)
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => ' ' + char.toUpperCase())
+    .trim();
+};

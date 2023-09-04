@@ -45,6 +45,12 @@ const Header = ({ onSideToggle }: HeaderProps) => {
         >
           Lib
         </Link>
+        <Link
+          to="/convert"
+          className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+        >
+          Convert
+        </Link>
       </nav>
       <div className={`md:hidden`}>
         <button
