@@ -30,7 +30,7 @@ const Side = ({ isOpen, onClose }: SideProps) => {
     <aside
       className={`${
         isOpen ? 'translate-x-0' : '-translate-x-full'
-      } fixed inset-y-0 left-0 w-64 bg-gray-800 text-white transition-all duration-300 ease-in-out z-50 min-h-full`}
+      } fixed inset-y-0 left-0 w-64 bg-gray-800 text-white transition-all duration-300 ease-in-out z-50 min-h-full opacity-95`}
     >
       <div className="flex justify-between items-center py-3 px-4">
         <div className="text-lg font-semibold">{/* 사이드메뉴 타이틀 */}</div>

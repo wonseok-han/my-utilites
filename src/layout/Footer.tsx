@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer
-      className="bg-gray-800 text-white py-2 px-4 flex items-center justify-center gap-5 "
+      className="bg-gray-800 text-white py-2 px-4 flex items-center justify-center gap-5 opacity-95"
       style={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
     >
       <p className="text-gray-400 text-center">

@@ -1,7 +1,7 @@
 // Header.tsx
 
 import { useState } from 'react';
-import { HiMenuAlt1 } from 'react-icons/hi';
+import { HiMenuAlt1, HiMenu } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import './styles/Header.css';
 
@@ -17,7 +17,7 @@ const Header = ({ onSideToggle }: HeaderProps) => {
   };
 
   return (
-    <header className="h-16 flex fixed w-full justify-between items-center py-3 px-4 bg-gray-800 text-white z-50">
+    <header className="h-16 flex fixed w-full justify-between items-center py-3 px-4 bg-gray-800 text-white z-50 opacity-95">
       <button
         className="text-gray-500 hover:text-white text-2xl"
         onClick={onSideToggle}
@@ -52,12 +52,12 @@ const Header = ({ onSideToggle }: HeaderProps) => {
           Convert
         </Link>
       </nav>
-      <div className={`md:hidden`}>
+      <div className={`flex items-center md:hidden`}>
         <button
           className="text-gray-500 hover:text-white text-2xl"
           onClick={handleMenuToggle}
         >
-          <HiMenuAlt1 />
+          <HiMenu />
         </button>
         <div
           className={`absolute inset-x-0 top-16 shadow-lg md:hidden bg-gray-800 text-white ${
@@ -82,6 +82,15 @@ const Header = ({ onSideToggle }: HeaderProps) => {
               }}
             >
               Lib
+            </Link>
+            <Link
+              to="/convert"
+              className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+            >
+              Convert
             </Link>
           </nav>
         </div>
