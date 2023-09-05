@@ -64,6 +64,7 @@ const ConvertString = () => {
       <ContentTitle text="1. Convert Case String" />
       <div className="flex w-full space-x-2">
         <select
+          className="shadow-sm rounded-md hover: ring-2 hover:ring-offset-1 hover:ring-gray-500 hover:outline-none"
           onChange={(event) => setSelected(event.target.value)}
           value={selected}
         >
@@ -73,19 +74,21 @@ const ConvertString = () => {
             </option>
           ))}
         </select>
-        <div className="bg-red-200">
-          <button onClick={() => convertStr()}>변환</button>
+        <div className="bg-gray-600 text-white rounded-md p-1 shadow-sm font-semibold hover:ring-2 hover:ring-offset-1 hover:ring-gray-500 hover:outline-none">
+          <button className="ml-2 mr-2" onClick={() => convertStr()}>
+            Convert
+          </button>
         </div>
       </div>
       <div className="grid space-y-2 grid-cols-1 mt-2 sm:grid-cols-2 sm:space-x-2 sm:space-y-0">
         <textarea
-          className="w-full h-96"
+          className="w-full h-96 p-2"
           placeholder="from"
           value={from}
           onChange={(event) => setFrom(event.target.value)}
         />
         <textarea
-          className="w-full h-96"
+          className="w-full h-96 p-2"
           placeholder="to"
           value={to}
           readOnly

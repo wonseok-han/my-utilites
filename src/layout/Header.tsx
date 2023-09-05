@@ -45,12 +45,6 @@ const Header = ({ onSideToggle }: HeaderProps) => {
         >
           Lib
         </Link>
-        <Link
-          to="/convert"
-          className="py-2 px-4 text-white font-semibold hover:text-gray-300"
-        >
-          Convert
-        </Link>
       </nav>
       <div className={`flex items-center md:hidden`}>
         <button
@@ -82,15 +76,6 @@ const Header = ({ onSideToggle }: HeaderProps) => {
               }}
             >
               Lib
-            </Link>
-            <Link
-              to="/convert"
-              className="py-2 px-4 text-white font-semibold hover:text-gray-300"
-              onClick={() => {
-                setIsMenuOpen(false);
-              }}
-            >
-              Convert
             </Link>
           </nav>
         </div>
