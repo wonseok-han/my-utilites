@@ -56,7 +56,7 @@ const rPad = (str, maxLen, right) => {
  */
 const convertToCamelCase = (str) => {
     return str
-      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => char.toUpperCase())
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => char.toUpperCase())
       .replace(/(^|\\s)\\S/g, (char) => char.toLowerCase());
 };`,
   },
@@ -71,10 +71,10 @@ const convertToCamelCase = (str) => {
  */
 const convertToKebabCase = (str) => {
     return str
-      .replace(/[A-Z]/g, (char: string, index: number) =>
+      .replace(/[A-Z]/g, (char, index) =>
         index !== 0 ? '-' + char : char
       )
-      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => '-' + char)
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => '-' + char)
       .toLowerCase()
       .trim();
 };`,
@@ -89,7 +89,7 @@ const convertToKebabCase = (str) => {
  * @description 문자열을 PascalCase로 변환하는 함수.
  */
 const convertToPascalCase = (str) => {
-    return (' ' + str).replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) =>
+    return (' ' + str).replace(/[^a-zA-Z0-9]+(.)/g, (m, char) =>
       char.toUpperCase()
     );
 };`,
@@ -118,8 +118,8 @@ const convertToSentenceCase = (str) => {
  */
 const convertToSnakeCase = (str) => {
     return (' ' + str)
-      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => '_' + char)
-      .replace(/[A-Z]/g, (char: string, index: number) =>
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => '_' + char)
+      .replace(/[A-Z]/g, (char, index) =>
         index !== 1 ? '_' + char : char
       )
       .toLowerCase()
@@ -138,7 +138,7 @@ const convertToSnakeCase = (str) => {
 const convertToTitleCase = (str) => {
     return (' ' + str)
       .replace(/[A-Z]/g, (char) => ' ' + char)
-      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char: string) => ' ' + char.toUpperCase())
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, char) => ' ' + char.toUpperCase())
       .trim();
 };`,
   },
