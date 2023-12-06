@@ -161,10 +161,6 @@
         }
       }
     ],
-    "@typescript-eslint/indent": [
-      "warn",
-      2
-    ], // Enforce consistent indentation
     "@typescript-eslint/comma-dangle": [
       "error",
       "only-multiline"
