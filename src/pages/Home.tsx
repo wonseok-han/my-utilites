@@ -1,4 +1,4 @@
-import ConvertString from './ConvertString';
+import ConvertString from './components/ConvertString';
 
 const Home = () => {
   return (

@@ -1,4 +1,4 @@
-import ConvertString from './ConvertString';
+import ConvertString from './components/ConvertString';
 import Home from './Home';
 import Libraries from './Libraries';
 

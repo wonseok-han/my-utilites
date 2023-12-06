@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 import CodeBlock from 'components/CodeBlock';
 import ContentTitle from 'components/ContentTitle';
 import { funcDataStr } from 'json/lib/data';
@@ -26,6 +28,10 @@ const CodeContent = ({ section, id, name, funcStr }: CodeContentProps) => {
 const Libraries = () => {
   return (
     <>
+      <Helmet>
+        <title>{`wonseok-han's Lib`}</title>
+      </Helmet>
+
       <ContentTitle text="1. Date" />
       <hr className="mt-1 h-1 bg-gray-700" />
       {funcDateStr.map((item) => (

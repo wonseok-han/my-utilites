@@ -1,12 +1,15 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Layout from 'layout/Layout';
 
 function App() {
   return (
-    <Router basename="/">
+    <>
+      <Helmet>
+        <title>{`wonseok-han's utilities`}</title>
+      </Helmet>
       <Layout />
-    </Router>
+    </>
   );
 }
 
