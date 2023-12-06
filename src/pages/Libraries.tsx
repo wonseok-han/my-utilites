@@ -1,8 +1,8 @@
 import CodeBlock from 'components/CodeBlock';
 import ContentTitle from 'components/ContentTitle';
-import { funcDataStr } from 'json/data';
-import { funcDateStr } from 'json/date';
-import { funcStringStr } from 'json/string';
+import { funcDataStr } from 'json/lib/data';
+import { funcDateStr } from 'json/lib/date';
+import { funcStringStr } from 'json/lib/string';
 
 interface CodeContentProps extends FuncStrProps {
   section: string;

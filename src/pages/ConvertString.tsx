@@ -8,7 +8,7 @@ import {
   convertToSentenceCase,
   convertToSnakeCase,
   convertToTitleCase,
-} from 'utils/string';
+} from 'lib/string';
 
 const cases = [
   {
