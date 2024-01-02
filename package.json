@@ -30,7 +30,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "tsc": "npx tsc --noEmit --skipLibCheck",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "fix": "eslint ./src --fix",
+    "prettier": "npx prettier -w ./src/**/*.\"(js|jsx|ts|tsx)\""
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [

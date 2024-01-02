@@ -1,5 +1,6 @@
 interface FuncStrProps {
   id: number;
   name: string;
-  funcStr: string;
+  funcJavascriptStr: string;
+  funcTypescriptStr: string;
 }

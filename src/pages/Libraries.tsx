@@ -10,16 +10,25 @@ interface CodeContentProps extends FuncStrProps {
   section: string;
 }
 
-const CodeContent = ({ section, id, name, funcStr }: CodeContentProps) => {
+const CodeContent = ({
+  section,
+  id,
+  name,
+  funcJavascriptStr,
+  funcTypescriptStr,
+}: CodeContentProps) => {
   return (
     <>
       <div className="ml-4">
         <ContentTitle
+          className="text-xl"
           text={`${section}-${id}. ${name}`}
           type="h2"
-          className="text-xl"
         />
-        <CodeBlock code={funcStr} language="javascript" />
+        <CodeBlock
+          javascript={funcJavascriptStr}
+          typescript={funcTypescriptStr}
+        />
       </div>
     </>
   );
@@ -37,35 +46,38 @@ const Libraries = () => {
       {funcDateStr.map((item) => (
         <CodeContent
           key={`date-${item.id}`}
-          section={'1'}
+          funcJavascriptStr={item.funcJavascriptStr}
+          funcTypescriptStr={item.funcTypescriptStr}
           id={item.id}
           name={item.name}
-          funcStr={item.funcStr}
+          section={'1'}
         />
       ))}
       <hr className="mt-1 h-1 bg-gray-700" />
 
-      <ContentTitle text="2. Data" className="mt-10" />
+      <ContentTitle className="mt-10" text="2. Data" />
       <hr className="mt-1 h-1 bg-gray-700" />
       {funcDataStr.map((item) => (
         <CodeContent
           key={`data-${item.id}`}
-          section={'2'}
+          funcJavascriptStr={item.funcJavascriptStr}
+          funcTypescriptStr={item.funcTypescriptStr}
           id={item.id}
           name={item.name}
-          funcStr={item.funcStr}
+          section={'2'}
         />
       ))}
 
-      <ContentTitle text="3. String" className="mt-10" />
+      <ContentTitle className="mt-10" text="3. String" />
       <hr className="mt-1 h-1 bg-gray-700" />
       {funcStringStr.map((item) => (
         <CodeContent
           key={`string-${item.id}`}
-          section={'3'}
+          funcJavascriptStr={item.funcJavascriptStr}
+          funcTypescriptStr={item.funcTypescriptStr}
           id={item.id}
           name={item.name}
-          funcStr={item.funcStr}
+          section={'3'}
         />
       ))}
     </>

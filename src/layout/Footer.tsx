@@ -11,8 +11,8 @@ const Footer = () => {
       </p>
       <a
         href={`https://github.com/wonseok-han/my-utilites`}
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
       >
         <FaGithub size={25} />
       </a>

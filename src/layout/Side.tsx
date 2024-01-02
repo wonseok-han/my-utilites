@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { useContext, useEffect, useState } from 'react';
 import { FaFolder, FaRegListAlt } from 'react-icons/fa';
 import { HiOutlineX } from 'react-icons/hi';
@@ -55,7 +52,6 @@ const Side = ({ isOpen, onClose }: SideProps) => {
             <a
               key={item.id}
               href={`#${item.id}`}
-              onClick={onClose}
               className={`block truncate px-3 py-2 rounded-md font-medium text-white hover:bg-gray-700 text-sm ${
                 location.pathname === '/' ? 'bg-gray-700' : ''
               }`}
@@ -64,6 +60,7 @@ const Side = ({ isOpen, onClose }: SideProps) => {
                 display: 'flex',
                 alignItems: 'center',
               }}
+              onClick={onClose}
             >
               {item.level > 1 ? (
                 <>

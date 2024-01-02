@@ -26,22 +26,22 @@ const Header = ({ onSideToggle }: HeaderProps) => {
       </button>
       <h1 className="text-lg font-bold text-white">
         <Link
-          to="/"
           className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+          to="/"
         >
           {`wonseok-han's Utilities`}
         </Link>
       </h1>
       <nav className="hidden md:flex md:items-center">
         <Link
-          to="/"
           className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+          to="/"
         >
           Home
         </Link>
         <Link
-          to="/lib"
           className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+          to="/lib"
         >
           Lib
         </Link>
@@ -60,8 +60,8 @@ const Header = ({ onSideToggle }: HeaderProps) => {
         >
           <nav className="flex flex-col items-center justify-center h-full">
             <Link
-              to="/"
               className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+              to="/"
               onClick={() => {
                 setIsMenuOpen(false);
               }}
@@ -69,8 +69,8 @@ const Header = ({ onSideToggle }: HeaderProps) => {
               Home
             </Link>
             <Link
-              to="/lib"
               className="py-2 px-4 text-white font-semibold hover:text-gray-300"
+              to="/lib"
               onClick={() => {
                 setIsMenuOpen(false);
               }}

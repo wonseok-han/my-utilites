@@ -65,8 +65,8 @@ const ConvertString = () => {
       <div className="flex w-full space-x-2">
         <select
           className="shadow-sm rounded-md hover: ring-2 hover:ring-offset-1 hover:ring-gray-500 hover:outline-none"
-          onChange={(event) => setSelected(event.target.value)}
           value={selected}
+          onChange={(event) => setSelected(event.target.value)}
         >
           {cases.map((item) => (
             <option key={item.text} value={item.value}>
@@ -88,10 +88,10 @@ const ConvertString = () => {
           onChange={(event) => setFrom(event.target.value)}
         />
         <textarea
+          readOnly
           className="w-full h-96 p-2"
           placeholder="to"
           value={to}
-          readOnly
         />
       </div>
     </>
