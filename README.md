@@ -13,6 +13,14 @@
 * React
 * Tailwind CSS
 
+## EsLint
+
+* EsLint 설정 👉 [.eslintrc.cjs](./.eslintrc.js)
+
+## Prettier
+
+* Prettier 설정 👉 [.prettierrc](./.prettierrc.js)
+
 ## Getting Started
 
 ```bash
