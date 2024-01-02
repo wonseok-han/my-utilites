@@ -13,6 +13,13 @@
 * React
 * Tailwind CSS
 
+## Getting Started
+
+```bash
+npm install
+npm start
+```
+
 ## EsLint
 
 * EsLint 설정 👉 [.eslintrc.cjs](./.eslintrc.js)
@@ -21,9 +28,20 @@
 
 * Prettier 설정 👉 [.prettierrc](./.prettierrc.js)
 
-## Getting Started
+## Source 디렉토리 구조
 
 ```bash
-npm install
-npm start
+.
+├── public # Public 폴더
+└── src
+    ├── components # Common Components
+    ├── contexts # Context
+    ├── json # Json Data
+    │   └── lib
+    ├── layout # Layout Components
+    │   └── styles
+    ├── lib # Function Libraries
+    ├── pages # Page Components
+    │   └── components # Page Local Components
+    └── types # Typescript Types
 ```
