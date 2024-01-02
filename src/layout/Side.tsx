@@ -19,6 +19,26 @@ const Side = ({ isOpen, onClose }: SideProps) => {
     setIsExpanded(!isExpanded);
   };
 
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const targetId = event.currentTarget.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const headerOffset = 86; // h-16 + py-3
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+
+    onClose();
+  };
+
   useEffect(() => {
     setTocItems(toc);
   }, [toc]);
@@ -60,7 +80,7 @@ const Side = ({ isOpen, onClose }: SideProps) => {
                 display: 'flex',
                 alignItems: 'center',
               }}
-              onClick={onClose}
+              onClick={handleClick}
             >
               {item.level > 1 ? (
                 <>
