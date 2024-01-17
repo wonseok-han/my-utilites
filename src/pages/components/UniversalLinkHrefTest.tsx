@@ -14,7 +14,7 @@ const UniversalLinkHrefTest = () => {
 
   const handleClick = () => {
     setTimeout(() => {
-      location.assign(deepLink);
+      location.href = deepLink;
     }, 0);
 
     // setTimeout(() => {
