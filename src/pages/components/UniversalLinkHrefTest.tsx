@@ -17,9 +17,10 @@ const UniversalLinkHrefTest = () => {
 
   useEffect(() => {
     if (deepLink) {
-      const element = document.createElement('a');
-      element.href = deepLink;
-      element.click();
+      window.open(deepLink);
+      // const element = document.createElement('a');
+      // element.href = deepLink;
+      // element.click();
     }
   }, [deepLink]);
 
