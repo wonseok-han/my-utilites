@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 import ContentTitle from 'components/ContentTitle';
 
@@ -13,21 +13,38 @@ const UniversalLinkHrefTest = () => {
   };
 
   const handleClick = () => {
-    // location.assign(deepLink);
-    setTimeout(() => {
-      const openWin = window.open('about:blank');
-      openWin.location.href = deepLink;
-    }, 500);
+    location.assign(deepLink);
+    // setTimeout(() => {
+    //   const openWin = window.open('about:blank');
+    //   openWin.location.href = `<${deepLink}>`;
+
+    //   setTimeout(() => {
+    //     openWin.close();
+    //   }, 2000);
+    // }, 500);
+
+    // const popup = window.open(undefined, 'connect');
+    // false && console.log(popup);
+    // const form = document.createElement('form');
+    // form.setAttribute('target', 'connect');
+    // form.setAttribute('action', deepLink);
+    // form.submit();
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (deepLink) {
       buttonRef.current.click();
-      // const element = document.createElement('a');
-      // element.href = deepLink;
-      // element.click();
     }
   }, [deepLink]);
+
+  // useEffect(() => {
+  //   if (deepLink) {
+  //     buttonRef.current.click();
+  //     // const element = document.createElement('a');
+  //     // element.href = deepLink;
+  //     // element.click();
+  //   }
+  // }, [deepLink]);
 
   return (
     <>
