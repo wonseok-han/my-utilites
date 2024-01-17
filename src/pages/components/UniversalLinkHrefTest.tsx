@@ -12,7 +12,11 @@ const UniversalLinkHrefTest = () => {
   };
 
   const handleClick = () => {
-    location.assign(deepLink);
+    // location.assign(deepLink);
+    setTimeout(() => {
+      const openWin = window.open('about:blank');
+      openWin.location.href = deepLink;
+    }, 500);
   };
 
   useEffect(() => {
