@@ -13,7 +13,10 @@ const UniversalLinkHrefTest = () => {
   };
 
   const handleClick = () => {
-    location.assign(deepLink);
+    setTimeout(() => {
+      location.assign(deepLink);
+    }, 0);
+
     // setTimeout(() => {
     //   const openWin = window.open('about:blank');
     //   openWin.location.href = `<${deepLink}>`;
