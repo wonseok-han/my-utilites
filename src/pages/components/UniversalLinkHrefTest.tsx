@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import ContentTitle from 'components/ContentTitle';
 
 const UniversalLinkHrefTest = () => {
+  const buttonRef = useRef<HTMLButtonElement>();
   const [deepLink, setDeepLink] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +22,7 @@ const UniversalLinkHrefTest = () => {
 
   useEffect(() => {
     if (deepLink) {
-      window.open(deepLink);
+      buttonRef.current.click();
       // const element = document.createElement('a');
       // element.href = deepLink;
       // element.click();
@@ -38,6 +39,7 @@ const UniversalLinkHrefTest = () => {
           onChange={handleChange}
         />
         <button
+          ref={buttonRef}
           style={{ border: '1px solid black', width: '100px' }}
           type="button"
           onClick={handleClick}
