@@ -36,7 +36,10 @@ const UniversalLinkHrefTest = () => {
 
   useLayoutEffect(() => {
     if (deepLink) {
-      buttonRef.current.click();
+      // buttonRef.current.click();
+      setTimeout(() => {
+        location.href = deepLink;
+      }, 0);
     }
   }, [deepLink]);
 
